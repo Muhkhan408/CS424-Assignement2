@@ -15,3 +15,6 @@ DataDictionary.xlsx - orignal data set
 corrections_log.csv - corrections of rows with invalid values
 menu_clean.csv - Cleaned data set as csv
 writeup.md - markdown file with tasks concsiely explained
+
+Collaboration notes:
+Everything was pushed by Muhammad but the tasks were divided well where both worked from home Omais recognized the data transformations needed while Muhammad added those transformation. Omais also make wrote code for initial visulazation while Muhammad made them better with adding interactions and then Omais and Muhammad met to finalize and refine the visulizations to get the final version
