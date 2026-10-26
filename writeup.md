@@ -23,9 +23,9 @@ The notebook (in Task 2 section) makes an output from the uneditable spreadsheet
 
 We used plain plots here and left the designed visualizations for Task 4. Histograms and a correlation matrix are in the notebook: every numeric attribute is right skewed (a few very large items), and calories, protein, fat, sodium, serving size and price are all positively correlated (mostly 0.6 to 0.9), because bigger items will tend to have a larger amount of everything.
 
-Distribution!(https://github.com/Muhkhan408/CS424-Assignement2/blob/main/Task%203%20Exploratory%20plots/fig1_distributions.png)
+Distribution![Distribution](https://github.com/Muhkhan408/CS424-Assignement2/blob/main/Task%203%20Exploratory%20plots/fig1_distributions.png)
 
-Correlations(https://github.com/Muhkhan408/CS424-Assignement2/blob/main/Task%203%20Exploratory%20plots/fig2_correlation.png)
+Correlations![Correlations](https://github.com/Muhkhan408/CS424-Assignement2/blob/main/Task%203%20Exploratory%20plots/fig2_correlation.png)
 
 * *Strange results.** Wendy’s is an unusual case with regard to sodium per calorie (2.6 vs. 1.7-2.5). This is the outlier we examined in Task 1. It is not a statistical error.
 
@@ -82,9 +82,9 @@ The static plots have one issue: dots cannot be identified. An interactive Plotl
 **Interactions, each for a task:**
 - **Hover** shows item, restaurant, size, calories, sugar and price, replacing the hand-placed labels.
 - **Type legend:** clicking a type hides it in both views at once.
-(https://github.com/Muhkhan408/CS424-Assignement2/blob/main/Task%205%20Added%20Views/preview.webp)
+![Hover+Type legend](https://github.com/Muhkhan408/CS424-Assignement2/blob/main/Task%205%20Added%20Views/preview.webp)
 - **Restaurant dropdown** fades every other restaurant in both views, so the item stays in context. We chose fading over filtering because one restaurant alone has too few dots to show a pattern.
-(https://github.com/Muhkhan408/CS424-Assignement2/blob/main/Task%205%20Added%20Views/fig11_plotly_notebook.png)
+![Hover+Type legend+dropdown](https://github.com/Muhkhan408/CS424-Assignement2/blob/main/Task%205%20Added%20Views/fig11_plotly_notebook.png)
 
 
 We did not add zoom or pan because 98 points fit on screen. Plotly in a plain notebook cannot link a click in one view to the other, so hover, the shared legend and the dropdown connect the views.
@@ -100,18 +100,18 @@ We modified the associated display from Task 5 (illustrated above) as it is the 
 - **Problem:** 35 out of the 37 Handheld items feature 12 grams of sugar or fewer, making this row quite tedious as it appears cluttered with dots. The view also failed to provide relevant information associated with non-sweet products with a lot of sugar.
 - **Change:** in the new version, the figure was transformed into a bar chart that shows the top 15 non-sweet items according to sugar content and features median dessert (46 grams of sugar) as a guideline. This significant adjustment leads to the complete change of the measures (length of the bars), the manner of estimation (15 items) and the scope of the solution (only non-sweet).
 - **Result:** only Jamaican Black Pepper Shrimp (70 grams) and Chinese Chicken Salad (63 grams) are above the median level, with Hotcakes having 45 grams of sugar slightly below. The cost is the overview of all items, which the Task 4 strip still shows.
-(https://github.com/Muhkhan408/CS424-Assignement2/blob/main/Task%206%20Refined/fig13_iteration1_ranked.png)
+![Iteration 1](https://github.com/Muhkhan408/CS424-Assignement2/blob/main/Task%206%20Refined/fig13_iteration1_ranked.png)
 
 
 **Iteration 2: connect the views with marks, not only with hover.**
 - **Problem:** nothing in the left view showed which dots were the high-sugar items; you had to hover.
 - **Change:** the eight non-sweet items above the 21.5 g limit (from Task 3) became larger diamonds with a black outline in the size view. We used a shape because color already encodes type.
 - **Result:** seven of the eight are large (450 g or more); only the Hotcakes (250 g) are small. But only 7 of the 30 items of 450 g or more are diamonds, so being large does not mean being high in sugar.
-(https://github.com/Muhkhan408/CS424-Assignement2/blob/main/Task%206%20Refined/fig15_current_design.png)
+![Iteration 2](https://github.com/Muhkhan408/CS424-Assignement2/blob/main/Task%206%20Refined/fig15_current_design.png)
 
 ## Task 7: Current design
 
-(https://github.com/Muhkhan408/CS424-Assignement2/blob/main/Task%207%20Final%20Visual/fig15_current_design%20(1).png)
+![Current design](https://github.com/Muhkhan408/CS424-Assignement2/blob/main/Task%207%20Final%20Visual/fig15_current_design%20(1).png)
 
 The current design is the last notebook cell (Task 7, Plotly): **size vs calories** on the left and **the 15 non-sweet items with the most sugar** on the right. Hovering anywhere provides more information, clicking the legend removes a type of items in both views, and a dropdown option shows only one restaurant at a time. The left side of the plot has a diamond-shaped symbol indicating items having more sugar than the limit, and there is a note below the plot that explains the meaning of the diamonds (only the change made since iteration 2).
 
