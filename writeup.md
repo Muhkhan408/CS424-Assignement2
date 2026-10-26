@@ -23,7 +23,7 @@ The notebook (in Task 2 section) makes an output from the uneditable spreadsheet
 
 We used plain plots here and left the designed visualizations for Task 4. Histograms and a correlation matrix are in the notebook: every numeric attribute is right skewed (a few very large items), and calories, protein, fat, sodium, serving size and price are all positively correlated (mostly 0.6 to 0.9), because bigger items will tend to have a larger amount of everything.
 
-Distribution(https://github.com/Muhkhan408/CS424-Assignement2/blob/main/Task%203%20Exploratory%20plots/fig1_distributions.png)
+Distribution!(https://github.com/Muhkhan408/CS424-Assignement2/blob/main/Task%203%20Exploratory%20plots/fig1_distributions.png)
 
 Correlations(https://github.com/Muhkhan408/CS424-Assignement2/blob/main/Task%203%20Exploratory%20plots/fig2_correlation.png)
 
