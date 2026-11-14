@@ -1,0 +1,5 @@
+task,variant,restaurants_shown,correct_answer,values_used
+T1,A,Cheesecake Factory | McDonald's | Wendy's,Cheesecake Factory,"{'Cheesecake Factory': 1740, ""McDonald's"": 440, ""Wendy's"": 959}"
+T1,B,Panera | Chipotle | Taco Bell,Panera,"{'Panera': 1480, 'Chipotle': 510, 'Taco Bell': 460}"
+T2,A,Cheesecake Factory | Panera,Cheesecake Factory,"{'Cheesecake Factory': 7, 'Panera': 1}"
+T2,B,Chipotle | Chili's,Chipotle,"{'Chipotle': 7, ""Chili's"": 3}"

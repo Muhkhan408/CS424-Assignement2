@@ -1,0 +1,41 @@
+participant_id,group,task,variant,condition,correct,time_s,timed_out,first_condition,struggles
+P01,1,T1,A,Static,1,50,no,Static,Figuring out axis for static
+P01,1,T1,B,Interactive,1,43,no,Static,Figuring out axis for static
+P01,1,T2,A,Static,1,32,no,Static,Figuring out axis for static
+P01,1,T2,B,Interactive,1,43,no,Static,Figuring out axis for static
+P02,2,T1,B,Static,1,37,no,Static,Understanding the Question 2B
+P02,2,T1,A,Interactive,1,46,no,Static,Understanding the Question 2B
+P02,2,T2,B,Static,1,67,no,Static,Understanding the Question 2B
+P02,2,T2,A,Interactive,1,43,no,Static,Understanding the Question 2B
+P03,1,T1,A,Static,1,23,no,Static,none noted
+P03,1,T1,B,Interactive,1,16,no,Static,none noted
+P03,1,T2,A,Static,0,27,no,Static,none noted
+P03,1,T2,B,Interactive,1,29,no,Static,none noted
+P04,2,T1,B,Static,1,69,no,Static,Figuring out axis for static
+P04,2,T1,A,Interactive,1,38,no,Static,Figuring out axis for static
+P04,2,T2,B,Static,1,29,no,Static,Figuring out axis for static
+P04,2,T2,A,Interactive,1,23,no,Static,Figuring out axis for static
+P05,3,T1,A,Static,1,29,no,Interactive,none noted
+P05,3,T1,B,Interactive,1,24,no,Interactive,none noted
+P05,3,T2,A,Static,0,22,no,Interactive,none noted
+P05,3,T2,B,Interactive,1,22,no,Interactive,none noted
+P06,3,T1,A,Static,1,55,no,Interactive,none noted
+P06,3,T1,B,Interactive,1,23,no,Interactive,none noted
+P06,3,T2,A,Static,0,27,no,Interactive,none noted
+P06,3,T2,B,Interactive,1,25,no,Interactive,none noted
+P07,4,T1,B,Static,1,21,no,Interactive,Figuring out all interactions like how to zoom in and out
+P07,4,T1,A,Interactive,1,75,no,Interactive,Figuring out all interactions like how to zoom in and out
+P07,4,T2,B,Static,1,23,no,Interactive,Figuring out all interactions like how to zoom in and out
+P07,4,T2,A,Interactive,1,35,no,Interactive,Figuring out all interactions like how to zoom in and out
+P08,3,T1,A,Static,1,26,no,Interactive,none noted
+P08,3,T1,B,Interactive,1,36,no,Interactive,none noted
+P08,3,T2,A,Static,1,28,no,Interactive,none noted
+P08,3,T2,B,Interactive,1,23,no,Interactive,none noted
+P09,4,T1,B,Static,1,45,no,Interactive,none noted
+P09,4,T1,A,Interactive,1,32,no,Interactive,none noted
+P09,4,T2,B,Static,1,40,no,Interactive,none noted
+P09,4,T2,A,Interactive,1,41,no,Interactive,none noted
+P10,1,T1,A,Static,1,45,no,Static,none noted
+P10,1,T1,B,Interactive,1,23,no,Static,none noted
+P10,1,T2,A,Static,0,32,no,Static,none noted
+P10,1,T2,B,Interactive,1,29,no,Static,none noted
