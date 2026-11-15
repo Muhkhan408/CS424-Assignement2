@@ -20,9 +20,9 @@ Edges: Data Loading → Python Computation → both Vega-Lite nodes (data), plus
 
 ## Screenshots (`screenshots/`)
 1. `curio_1_overview.png`: the dataflow after Run All, all nodes Done.
-![Curio dataflow overview](screenshots/curio_1_overview.png)
+![Curio dataflow overview](https://github.com/Muhkhan408/CS424-Assignement2/blob/main/assignment3/Curio/screenshots/curio_1_overview.png.JPG)
 2. `curio_2_brush_link.png`: a brush over the large, high-calorie region of the scatter; those items are orange in the lower chart.
-![Curio brush linking](screenshots/curio_2_brush_link.png)
+![Curio brush linking]([screenshots/curio_2_brush_link.png](https://github.com/Muhkhan408/CS424-Assignement2/blob/main/assignment3/Curio/screenshots/curio_2_brush_link.png.JPG))
 
 ## Run it (Curio installed from git, as the assignment requires)
 ```bash
