@@ -1,0 +1,133 @@
+{
+  "dataflow": {
+    "nodes": [
+      {
+        "id": "239b0c6e-213c-4a68-85ca-52d13c339e3c",
+        "type": "curio.builtin/data-loading@1",
+        "x": 594.116832739288,
+        "y": 530.5971812003171,
+        "width": 450,
+        "height": 316,
+        "saveOutputDataset": false,
+        "content": "import pandas as pd\r\n\r\ndf = pd.read_csv('menu_clean.csv')\r\ndf = df[['restaurant', 'type', 'item', 'serving_g', 'calories', 'cal_per_100g']]\r\ndf.metadata = {'name': 'menu_items'}\r\nreturn df",
+        "out": "DEFAULT",
+        "in": "DEFAULT",
+        "goal": "",
+        "metadata": {
+          "keywords": [],
+          "datasetRefs": [
+            "imported.x87d8578bf8f9"
+          ],
+          "datasetWidgets": {
+            "data": {
+              "id": "imported.x87d8578bf8f9",
+              "title": "Menu Clean",
+              "format": "csv",
+              "refs": [
+                "imported.x87d8578bf8f9"
+              ]
+            }
+          },
+          "widgets": [
+            {
+              "name": "data",
+              "type": "dataset",
+              "default": "",
+              "label": "Data",
+              "value": "imported.x87d8578bf8f9"
+            }
+          ]
+        },
+        "title": "Data Loading"
+      },
+      {
+        "id": "42eb3315-04b3-43a0-b05e-74a51498f40c",
+        "type": "curio.builtin/python-computation@1",
+        "x": 1116.0841011971486,
+        "y": 474.7890366830447,
+        "saveOutputDataset": false,
+        "content": "import pandas as pd\r\n\r\ndf = input_0\r\nout = df[df['cal_per_100g'] >= 0].reset_index(drop=True)\r\nout.metadata = {'name': 'filtered_items'}\r\nreturn out",
+        "out": "DEFAULT",
+        "in": "DEFAULT",
+        "goal": "",
+        "metadata": {
+          "keywords": []
+        },
+        "title": "Python Computation"
+      },
+      {
+        "id": "dc8b7ecf-1d14-47ff-b1f0-effa254ad3fb",
+        "type": "curio.builtin/vis-vega@1",
+        "x": 1821.9537364764565,
+        "y": 18.945744771757216,
+        "width": 670,
+        "height": 534,
+        "saveOutputDataset": false,
+        "content": "{\r\n  \"$schema\": \"https://vega.github.io/schema/vega-lite/v6.json\",\r\n  \"width\": 470, \"height\": 340,\r\n  \"title\": \"Calories vs serving size (brush to highlight)\",\r\n  \"params\": [{\"name\": \"brush\", \"select\": \"interval\"}],\r\n  \"mark\": {\"type\": \"point\", \"filled\": true, \"size\": 70},\r\n  \"encoding\": {\r\n    \"x\": {\"field\": \"serving_g\", \"type\": \"quantitative\", \"title\": \"Serving size (g)\"},\r\n    \"y\": {\"field\": \"calories\", \"type\": \"quantitative\", \"title\": \"Calories\"},\r\n    \"color\": {\"field\": \"type\", \"type\": \"nominal\", \"title\": \"Restaurant type\"},\r\n    \"shape\": {\"field\": \"restaurant\", \"type\": \"nominal\"},\r\n    \"opacity\": {\"condition\": {\"param\": \"brush\", \"value\": 0.95}, \"value\": 0.35},\r\n    \"tooltip\": [{\"field\": \"item\"}, {\"field\": \"restaurant\"}, {\"field\": \"calories\"}]\r\n  }\r\n}",
+        "out": "DEFAULT",
+        "in": "DEFAULT",
+        "goal": "",
+        "metadata": {
+          "keywords": []
+        },
+        "title": "Vega-Lite"
+      },
+      {
+        "id": "e4a59033-bf4f-4527-ba65-89830f08dcb8",
+        "type": "curio.builtin/vis-vega@1",
+        "x": 2599.987981468683,
+        "y": 626.2695078146425,
+        "width": 744,
+        "height": 488,
+        "saveOutputDataset": false,
+        "content": "{\r\n  \"$schema\": \"https://vega.github.io/schema/vega-lite/v6.json\",\r\n  \"width\": 470, \"height\": 220,\r\n  \"title\": \"Calories per 100 g (orange = brushed in scatter)\",\r\n  \"mark\": {\"type\": \"point\", \"filled\": true, \"size\": 70},\r\n  \"encoding\": {\r\n    \"x\": {\"field\": \"cal_per_100g\", \"type\": \"quantitative\", \"title\": \"Calories per 100 g\"},\r\n    \"y\": {\"field\": \"restaurant\", \"type\": \"nominal\", \"title\": null},\r\n    \"color\": {\"condition\": {\"test\": \"datum.interacted === '1'\", \"value\": \"#e6550d\"}, \"value\": \"#9a9a9a\"},\r\n    \"tooltip\": [{\"field\": \"item\"}, {\"field\": \"cal_per_100g\", \"format\": \".0f\"}]\r\n  }\r\n}",
+        "out": "DEFAULT",
+        "in": "DEFAULT",
+        "goal": "",
+        "metadata": {
+          "keywords": []
+        },
+        "title": "Vega-Lite"
+      }
+    ],
+    "edges": [
+      {
+        "id": "reactflow__edge-239b0c6e-213c-4a68-85ca-52d13c339e3cout-42eb3315-04b3-43a0-b05e-74a51498f40cin",
+        "source": "239b0c6e-213c-4a68-85ca-52d13c339e3c",
+        "target": "42eb3315-04b3-43a0-b05e-74a51498f40c",
+        "sourceHandle": "out",
+        "targetHandle": "in"
+      },
+      {
+        "id": "reactflow__edge-42eb3315-04b3-43a0-b05e-74a51498f40cout-dc8b7ecf-1d14-47ff-b1f0-effa254ad3fbin",
+        "source": "42eb3315-04b3-43a0-b05e-74a51498f40c",
+        "target": "dc8b7ecf-1d14-47ff-b1f0-effa254ad3fb",
+        "sourceHandle": "out",
+        "targetHandle": "in"
+      },
+      {
+        "id": "reactflow__edge-42eb3315-04b3-43a0-b05e-74a51498f40cout-e4a59033-bf4f-4527-ba65-89830f08dcb8in_1",
+        "source": "42eb3315-04b3-43a0-b05e-74a51498f40c",
+        "target": "e4a59033-bf4f-4527-ba65-89830f08dcb8",
+        "sourceHandle": "out",
+        "targetHandle": "in"
+      },
+      {
+        "type": "Interaction",
+        "id": "reactflow__edge-dc8b7ecf-1d14-47ff-b1f0-effa254ad3fbin/out-e4a59033-bf4f-4527-ba65-89830f08dcb8in/out",
+        "source": "dc8b7ecf-1d14-47ff-b1f0-effa254ad3fb",
+        "target": "e4a59033-bf4f-4527-ba65-89830f08dcb8",
+        "sourceHandle": "in/out",
+        "targetHandle": "in/out"
+      }
+    ],
+    "name": "menu_density_explorer",
+    "task": "",
+    "timestamp": 1794707846471,
+    "provenance_id": "menu_density_explorer",
+    "packages": [
+      "curio.builtin@1"
+    ],
+    "categories": {}
+  }
+}
